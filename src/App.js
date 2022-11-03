@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, Routes, Route } from "react-router-dom"
+// import { Routes, Route } from "react-router-dom"
 import Button from "./components/Button";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
-import Contact from "./components/Contact";
 
 export default function App() {
   const links = [
@@ -52,18 +51,11 @@ export default function App() {
       <section id="profile" className="w-full mt-5 sm:mb-5">
         <Profile />
       </section>
-
       <section id="links" className="flex flex-col w-full gap-y-5">
         {links.map((link) => (
           <Button key={link.id} {...link} />
         ))}
-        <Link to="/contact">{links.value}</Link>
-        <Routes>
-          <Route path="/contact" element={<Contact/>}></Route>
-        </Routes>
-        
       </section>
-
       <section id="social-links" className="flex justify-center py-6 gap-x-6">
         <a href="https://hng9.slack.com/messages/C041JU70S5U/team/U0482L1J9FY" target="_blank" rel="noopener noreferrer">
           <img src="slack.png" alt="slack" />
@@ -72,7 +64,6 @@ export default function App() {
           <img src="github.png" alt="github" />
         </a>
       </section>
-
       <section id="footer" className="w-full">
         <Footer />
       </section>
