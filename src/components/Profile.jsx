@@ -16,7 +16,12 @@ export default function Profile() {
           </div>
         )}
       </div>
-      <h1 id="slack">David Abolade</h1>
+
+      <a href='https://twitter.com/theDavid_AO' target='_blank'
+        rel="noopener noreferrer">
+        <p id="twitter">theDavid_AO</p>
+      </a>
+      <h1 id="slack">davedev</h1>
       <img src="share_button_desktop.png" alt="share button" className="hidden sm:block absolute right-0 top-[-10px]" />
       <img src="share_button_mobile.png" alt="share_button" className="sm:hidden absolute right-0 top-[-10px] block w-7 h-auto" />
     </header>
