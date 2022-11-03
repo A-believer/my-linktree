@@ -6,7 +6,7 @@ export default function Button({ id, value, link }) {
     <a
       href={link}
       id={id}
-      target="_blank"
+      target=""
       rel="noopener noreferrer"
       className="w-full text-center py-4 bg-gray-200 border border-gray-200 rounded-lg font-medium hover:bg-gray-300 focus:border-gray-400"
     >
