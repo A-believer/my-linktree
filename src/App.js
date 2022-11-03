@@ -34,6 +34,11 @@ export default function App() {
       id: "books__design",
       value: "Design Books",
       link: "https://books.zuri.team/design-rules",
+    },
+    {
+      id: "contact",
+      value: "Contact Me",
+      link: "/contact",
     }
   ]
   return (
