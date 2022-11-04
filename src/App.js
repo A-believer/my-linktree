@@ -1,5 +1,4 @@
 import React from "react";
-// import { Routes, Route } from "react-router-dom"
 import Button from "./components/Button";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
