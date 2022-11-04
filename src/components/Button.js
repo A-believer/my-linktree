@@ -8,7 +8,8 @@ export default function Button({ id, value, link }) {
       id={id}
       target=""
       rel="noopener noreferrer"
-      className="w-full text-center py-4 bg-gray-200 border border-gray-200 rounded-lg font-medium hover:bg-gray-300 focus:border-gray-400"
+      className="w-full text-center py-4 bg-gray-200 border border-gray-200 
+      rounded-lg font-medium hover:bg-gray-300 focus:border-gray-400"
     >
       {value}
     </a>

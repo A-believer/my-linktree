@@ -2,7 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap);
 
 
 *,
@@ -51,12 +50,12 @@ h4,
 h5,
 h6 {
     font-size: inherit;
-    font-weight: inherit
+    font-weight: inherit;
 }
 
 a {
     color: inherit;
-    text-decoration: inherit
+    text-decoration: inherit;
 }
 
 b,
@@ -228,7 +227,6 @@ object,
 svg,
 video {
     display: block;
-    vertical-align: middle
 }
 
 img,
@@ -623,5 +621,3 @@ video {
         justify-content: space-between
     }
 }
-
-/*# sourceMappingURL=main.abb56582.css.map*/
