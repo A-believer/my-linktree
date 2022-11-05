@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Footer from "../components/Footer";
 import "../index.css";
 
 export default function Contact() {
@@ -15,7 +14,7 @@ export default function Contact() {
     last_name: "",
     email: "",
     message: "",
-    agreement: false,
+    agreement: "",
   };
 
   const [formEntry, setFormEntry] = useState(initialEntry);
@@ -233,10 +232,6 @@ export default function Contact() {
           </button>
         </div>
       </form>
-      {/* <section id="footer" className="w-full">
-        <hr />
-        <Footer />
-      </section> */}
     </main>
   );
 }
