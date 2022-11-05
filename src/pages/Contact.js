@@ -27,12 +27,6 @@ export default function Contact() {
     setFormEntry({ ...formEntry, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormErrors(valid(formEntry));
-    setIsSubmit(true);
-  };
-
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -61,6 +55,12 @@ export default function Contact() {
       errors.agreement = "please check this box!";
     }
     return errors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(valid(formEntry));
+    setIsSubmit(true);
   };
 
   return (
@@ -101,8 +101,12 @@ export default function Contact() {
               name="first_name"
               id="first_name"
               value={formEntry.first_name}
-              className="w-full px-3 py-2 mt-2 border rounded-md
-              appearance-none focus:outline-none focus:shadow-ring"
+              className={`w-full px-3 py-2 mt-2 border rounded-md
+              appearance-none focus:outline-none focus:shadow-ring${
+                formErrors.first_name
+                  ? "focus:shadow-error border-[#F89687]"
+                  : "focus:shadow-ring"
+              }`}
               placeholder="Enter your first name"
               onChange={handleChange}
             />
@@ -124,8 +128,12 @@ export default function Contact() {
               name="last_name"
               id="last_name"
               value={formEntry.last_name}
-              className="w-full px-3 py-2 mt-2 border rounded-md
-              outline-none appearance-none focus:shadow-ring"
+              className={`w-full px-3 py-2 mt-2 border rounded-md
+              outline-none appearance-none focus:shadow-ring ${
+                formErrors.last_name
+                  ? "focus:shadow-error border-[#F89687]"
+                  : "focus:shadow-ring"
+              }`}
               placeholder="Enter your last name"
               onChange={handleChange}
             />
@@ -151,7 +159,7 @@ export default function Contact() {
               value={formEntry.email}
               className={`w-full px-3 py-2 mt-2 border rounded-md
               outline-none appearance-none focus:shadow-ring  ${
-                formErrors.message
+                formErrors.email
                   ? "focus:shadow-error border-[#F89687]"
                   : "focus:shadow-ring"
               }`}
@@ -197,8 +205,13 @@ export default function Contact() {
             value={formEntry.agreement}
             type="checkbox"
             onChange={handleChange}
-            class="w-4 h-4 text-blue-600 bg-gray-100 rounded 
-            border-gray-300 focus:ring-blue-500 focus:ring-2"
+            class={`w-4 h-4 text-blue-600 bg-gray-100 rounded 
+            border-gray-300  hover:bg-blue-300
+            hover: shadow-ring-blue-500  ${
+              formErrors.agreement
+                ? "focus:shadow-error border-[#F89687]"
+                : "focus:shadow-ring"
+            }`}
           />
           <label
             className="ml-4 text-sm 
@@ -207,7 +220,6 @@ export default function Contact() {
           >
             You agree to providing your data to {name} who may contact you
           </label>
-          <p>{formErrors.agreement}</p>
         </div>
 
         <div className="flex items-center justify-between">
@@ -215,7 +227,7 @@ export default function Contact() {
             type="submit"
             id="btn__submit"
             className="w-full text-center text-white py-3 px-5 bg-blue-600 border border-blue-600 
-                rounded-lg font-semibold hover:bg-blue-300 focus:border-blue-400"
+                rounded-lg font-semibold hover:bg-blue-700 focus:border-blue-400"
           >
             Send message
           </button>

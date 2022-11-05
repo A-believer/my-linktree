@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "./components/Button";
 import Profile from "./components/Profile";
-// import Footer from "./components/Footer";
 
 export default function App() {
   const links = [
@@ -71,9 +70,6 @@ export default function App() {
           <img src="github.png" alt="github" />
         </a>
       </section>
-      {/* <section id="footer" className="w-full">
-        <Footer />
-      </section> */}
     </main>
   );
 }

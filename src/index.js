@@ -5,7 +5,6 @@ import App from "./App";
 import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contact from "./pages/Contact";
-// import Error from "./page/Error";
 
 const routing = createBrowserRouter([
   {
@@ -16,10 +15,10 @@ const routing = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
-  {
-    path: "*",
-    // element: <Error />,
-  },
+  // {
+  //   path: "*",
+  //   element: <Error />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
