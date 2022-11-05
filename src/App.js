@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./components/Button";
 import Profile from "./components/Profile";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 export default function App() {
   const links = [
@@ -36,18 +36,17 @@ export default function App() {
       link: "https://books.zuri.team/design-rules",
     },
     {
-     id: "contact",
+      id: "contact",
       value: "Contact Me",
-      link: "/contact"
-  }
-  ]
-
-  
+      link: "/contact",
+    },
+  ];
 
   return (
-    <main className="flex flex-col w-full max-w-3xl px-5 py-6 mx-auto 
-    text-gray-900 font-inter gap-y-5">
-      
+    <main
+      className="flex flex-col w-full max-w-3xl px-5 py-6 mx-auto 
+    text-gray-900 font-inter gap-y-5"
+    >
       <section id="profile" className="w-full mt-5 sm:mb-5">
         <Profile />
       </section>
@@ -57,16 +56,24 @@ export default function App() {
         ))}
       </section>
       <section id="social-links" className="flex justify-center py-6 gap-x-6">
-        <a href="https://hng9.slack.com/messages/C041JU70S5U/team/U0482L1J9FY" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://hng9.slack.com/messages/C041JU70S5U/team/U0482L1J9FY"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src="slack.png" alt="slack" />
         </a>
-        <a href="https://github.com/A-believer" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/A-believer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src="github.png" alt="github" />
         </a>
       </section>
-      <section id="footer" className="w-full">
+      {/* <section id="footer" className="w-full">
         <Footer />
-      </section>
+      </section> */}
     </main>
   );
 }
