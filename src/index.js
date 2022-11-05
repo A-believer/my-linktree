@@ -25,11 +25,11 @@ const routing = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div>
+    <div className="h-full pb-30">
       <RouterProvider router={routing} />
       <section
         id="footer"
-        className="relative mt-12 bottom-0 w-full px-5 pt-12 bg-white md:px-28 md:pb-10"
+        className="relative bottom-0 w-full mt-28 p-12 bg-white md:px-28 md:pb-10"
       >
         <Footer />
       </section>

@@ -208,7 +208,7 @@ export default function Contact() {
             class={`w-4 h-4 text-blue-600 bg-gray-100 rounded 
             border-gray-300  hover:bg-blue-300
             hover: shadow-ring-blue-500  ${
-              formErrors.agreement
+              !formErrors.agreement
                 ? "focus:shadow-error border-[#F89687]"
                 : "focus:shadow-ring"
             }`}
